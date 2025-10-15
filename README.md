@@ -66,6 +66,12 @@ They’re applied through Active Directory, ensuring consistent policies across 
    The Account lockout threshold will reset back to 5 after 3 minutes according to the "Reset account lockout" policy.
 
 
-4. The GPO will take effect and apply to users in the domain after 90 minutes, but we can make it take effect immediately by signing into the client VM with an admin account -> Open either Powershell or Command Line -> type and run gpupdate /force
+4. The GPO will take effect and apply to users in the domain after 90 minutes, but we can make it take effect immediately by signing into the client VM with an admin account -> Open either Powershell or Command Line -    > type and run gpupdate /force
 
    <img src="https://i.imgur.com/M4kdQCf.png" alt="gpupdate /force" />
+
+   We can run gpresult /r to see if the GPO applied to our domain under Computer Settings.
+
+   <img src="https://i.imgur.com/Emjt1t5.png" alt="gpresult /r" />
+
+   
