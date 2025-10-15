@@ -68,6 +68,7 @@ They’re applied through Active Directory, ensuring consistent policies across 
    With this GPO, a user account will lock out after the user fails to sign in 5 times and will have to wait 3 minutes before they can sign in again.
    The Account lockout threshold will reset back to 5 after 3 minutes according to the "Reset account lockout" policy.
 
+
 4. The GPO will take effect and apply to users in the domain after 90 minutes, but we can make it take effect immediately by going into the client VM -> Open either Powershell or Command Line -> type and run gpupdate /force
 
-   <img src="https://i.imgur.com/J0rPsUd.png" alt="gpupdate /force" />
+   <img src="https://i.imgur.com/0FVvHDe.png" alt="gpupdate /force" />
