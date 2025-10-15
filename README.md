@@ -35,19 +35,16 @@ They’re applied through Active Directory, ensuring consistent policies across 
  
 <h2>Implementation Steps</h2>
 
-1. For this tutorial, we will create a GPO that locks a user account when they fail to sign in a certain number of times. First, type Group Policy Object in the search function in the task bar
-   and open Group Policy Object. Then click the dropdown next to Domains -> dropdown next to your domain name -> Right click domain name -> Select "Create a GPO in this domain, and Link it here..."
+1. For this tutorial, we will create a GPO that locks a user account when they fail to sign in a certain number of times. First, type run in the search function in the task bar -> type gpmc.msc in the open line and       click OK to open Group Policy Management. Then click the dropdown next to Domains -> dropdown next to your domain name -> Right click Default Domain Policy -> Click Edit
 
-   <img src="https://i.imgur.com/F7Lb7i8.png" alt="Open GPO" />
+   <img src="https://i.imgur.com/vynQrbm.png" alt="Open GPO" />
 
-   Name the GPO that tells what the GPO is for. In this case, we want to create a GPO that locks out an account when they fail to sign in a certain number of times.
-   I'll name this "Account Lockout."
 
-   <img src="https://i.imgur.com/FkvNbGo.png" alt="Name GPO" />
+2. Click on dropdown next to Computer Configurations -> Windows Settings -> Security Settings -> Account Policies -> Account Lockout Policy
 
-2. Right click on the newly created GPO -> Click Edit > Click on dropdown next to Computer Configurations -> Windows Settings -> Security Settings -> Account Policies
+   <img src="https://i.imgur.com/aP4qSyj.png" alt="Navigating GPO settings" />
 
-   <img src="https://i.imgur.com/HH5WEBb.png" alt="Navigating GPO settings" />
+   <img src="https://i.imgur.com/rioZZP8.png" alt="Navigating GPO settings 2" />
 
    - In Group Policy Object (GPO), there are two main sections: Computer Configuration and User Configuration, and they differ in who or what the settings apply to:
 
@@ -69,6 +66,6 @@ They’re applied through Active Directory, ensuring consistent policies across 
    The Account lockout threshold will reset back to 5 after 3 minutes according to the "Reset account lockout" policy.
 
 
-4. The GPO will take effect and apply to users in the domain after 90 minutes, but we can make it take effect immediately by going into the client VM -> Open either Powershell or Command Line -> type and run gpupdate /force
+4. The GPO will take effect and apply to users in the domain after 90 minutes, but we can make it take effect immediately by signing into the client VM with an admin account -> Open either Powershell or Command Line -> type and run gpupdate /force
 
-   <img src="https://i.imgur.com/0FVvHDe.png" alt="gpupdate /force" />
+   <img src="https://i.imgur.com/M4kdQCf.png" alt="gpupdate /force" />
