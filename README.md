@@ -74,4 +74,17 @@ They’re applied through Active Directory, ensuring consistent policies across 
 
    <img src="https://i.imgur.com/Emjt1t5.png" alt="gpresult /r" />
 
-   
+
+5. Let's test out our GPO by logging out of the client VM and logging with a client account. I intentionally signed in with the incorrect password 5 times and now the user account has been locked out, which means the     GPO is active and working.
+
+   <img src="https://i.imgur.com/o4qMPQU.png" alt="account locked out" />
+
+6. Even though the purpose of this lab is showing how to setup a GPO, let's not leave our boy John waiting for his account to unlock. Go into the DC VM -> Active Directory Users and Computers -> find the user account     that was locked out -> click the box next to Unlock Account -> OK
+
+   <img src="https://i.imgur.com/VECOGim.png" alt="unlock account" />
+
+   Hooray, our boy can login again.
+
+   <img src="https://i.imgur.com/l8SqDn5.png" alt="John can login" />
+
+Congratulations, you've learned how to create a GPO, apply the GPO, and how to enable account lockout after failed attempts to sign in. 
