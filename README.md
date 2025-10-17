@@ -16,6 +16,7 @@ They’re applied through Active Directory, ensuring consistent policies across 
 - Remote Desktop
 - Active Directory Domain Services
 - VMWare (or Oracle Virtualbox)
+- Command Prompt
 
 <h2>Operating Systems Used </h2>
 
